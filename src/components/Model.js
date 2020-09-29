@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import styled from "styled-components";
-import { ButtonContainer } from "./Button"
 import { ProductConsumer } from "../context"
-import { Link } from "react-router-dom"
 
 
 class Model extends Component {
@@ -18,8 +16,8 @@ class Model extends Component {
         return (
             <ProductConsumer>
                 {(value) => {
-                    const { modalOpen, closeModal } = value;
-                    const { img, title, price } = value.modalProduct
+                    const { modalOpen } = value;
+                    const { img, title} = value.modalProduct
                     if (!modalOpen) {
                         return null;
                     }
